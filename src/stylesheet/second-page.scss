@@ -1,0 +1,22 @@
+$bgColor: #0b1d51;
+$textColor: #d1c6ad;
+
+.header {
+  background-color: $bgColor;
+  color: $textColor;
+  padding: 10px 0;
+}
+
+.image-list {
+  padding-bottom: 64px;
+  padding-top: 20px;
+}
+
+.load-more-wrapper {
+  padding-top: 20px;
+}
+
+.search-group {
+  display: flex;
+  gap: 8px;
+}

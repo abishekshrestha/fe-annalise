@@ -64,10 +64,10 @@ const Search = ({
       {imageList.length > 0 && (
         <React.Fragment>
           <div className="row" data-testid="image-list">
-            {imageList?.map((item: {}) => (
+            {imageList?.map((item: {}, index: number) => (
               // TODO: imageList and item type needs to be defined clearly
               //@ts-ignore
-              <div className="col-4 col-12-sm" key={item?.id}>
+              <div className="col-4 col-12-sm" key={`${item?.id}-${index}`}>
                 {
                   //@ts-ignore
                   <img className="img-fluid" src={item.urls?.regular} />
@@ -77,7 +77,9 @@ const Search = ({
           </div>
           {!loading && page < totalPages && (
             <div className="center load-more-wrapper">
-              <button data-testid="load-more" onClick={onPaginationClick}>Load more</button>
+              <button data-testid="load-more" onClick={onPaginationClick}>
+                Load more
+              </button>
             </div>
           )}
         </React.Fragment>

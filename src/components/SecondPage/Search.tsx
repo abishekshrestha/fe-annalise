@@ -70,7 +70,7 @@ const Search = ({
               <div className="col-4 col-12-sm" key={`${item?.id}-${index}`}>
                 {
                   //@ts-ignore
-                  <img className="img-fluid" src={item.urls?.regular} />
+                  <img className="img-fluid" src={item.urls?.regular} alt={item?.alt_description} />
                 }
               </div>
             ))}
